@@ -1,0 +1,27 @@
+CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, password VARCHAR(255) NOT NULL);
+
+CREATE TABLE products (id SERIAL PRIMARY KEY, name VARCHAR(255) NOT NULL, price DECIMAL NOT NULL);
+
+CREATE OR REPLACE PROCEDURE register_user(email VARCHAR, password VARCHAR)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    INSERT INTO users(email, password) VALUES (email, password);
+END;
+$$;
+
+
+CREATE OR REPLACE PROCEDURE login_user(email_arg VARCHAR, password_arg VARCHAR)
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    user_rec RECORD;
+BEGIN
+    SELECT INTO user_rec * FROM users WHERE email = email_arg AND password = password_arg;
+    IF FOUND THEN
+        RAISE NOTICE 'User logged in successfully.';
+    ELSE
+        RAISE EXCEPTION 'Login failed: User not found.';
+    END IF;
+END;
+$$;
