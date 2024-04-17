@@ -15,5 +15,4 @@ router.post('/secure-login', controller.loginUserSecurely);
 router.post('/validate-login', controller.loginValidate);
 router.post('/call-login', controller.loginUserCallProcedure);
 
-
 module.exports = router;

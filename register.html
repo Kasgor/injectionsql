@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="https://getbootstrap.com/docs/5.3/examples/sign-in/sign-in.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+<script crossorigin="anonymous"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+<main class="form-signin w-100 m-auto">
+    <form>
+        <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+        <p class="alert" id="alert"></p>
+        <div class="form-floating form-group">
+            <label for="floatingInput">Email</label>
+            <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Enter your email">
+        </div>
+        <div class="form-floating form-group">
+            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Enter your password">
+        </div>
+
+        <button class="btn btn-primary w-100 py-2" id="login-button" type="submit" formaction="/register" formmethod="post">Sign up</button>
+        <a href="/login" class="link link-secondary">Already have an account?</a>
+    </form>
+</main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
